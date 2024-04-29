@@ -60,3 +60,17 @@ root.render(<Panel communicationLayer={communicationLayer} />);
 ## Contributing
 
 We welcome contributions to the Player UI Devtools Browser Extension.
+
+## Local Development
+If you want to make any changes/contributions to the devtools extension addon. 
+
+To get started with the local browser devtools extension:
+
+```bash
+cd devtools/plugins/desktop/test-env
+pnpm run dev:chrome
+```
+
+This will create a `browser-devtools` on your desktop. Inside of this; you will find a `build` folder that contains `chrome-mv3-prod`. You load it as an extension with Chrome. (Manage extensions -> Load unpacked). You may need to turn on any developer mode on the top right.
+
+You can then run your application containing Player and use the BasicWebDevPlugin so that your application can communicate with the extension.
